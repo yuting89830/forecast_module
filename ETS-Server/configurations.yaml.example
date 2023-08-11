@@ -1,0 +1,49 @@
+#MQTT Informations
+MQTT_Broker : "..."
+MQTT_Port : 1883
+Keep_Alive_Interval : 60
+MQTT_Topic : "ETS/#"
+MQTT_username_publisher: "..."
+MQTT_password_publisher: "..."
+MQTT_username_listener: "..."
+MQTT_password_listener: "..."
+
+Sniffing_time : 60
+
+#ESP informations
+numRoom : 1
+room:
+  "1" :
+    # numEsp : 3    
+    # set num to 1 since we don't need the functionality of location analysis.
+    numEsp : 2
+    X : 4.
+    Y : 2.6
+    EspCoor:
+      "lib_esp32_1a": # avoiding an unknown error occured on esp32 while publishing MQTT
+        X : 4.
+        Y : 2.6
+      "lib_esp32_2":
+        X : 0.
+        Y : 0.
+      # "lib_esp32_3":
+      #   X : 0
+      #   Y : 2.6
+      #"4":
+      #  X : 4.
+      #  Y : 2.6
+
+
+#MYSQL Information
+# username : "%USERNAME"
+# password : "%PASSWORD"
+username: "..."
+password: "..."
+root_password: "..."
+host: "127.0.0.1"
+db_port: 3306
+
+#Localization information
+z_max : -75 # max - min = - 95 - ( - 20) = -75
+z_off : -20 # max is -90
+z_parameter: 4
